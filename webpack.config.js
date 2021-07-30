@@ -1,5 +1,7 @@
 const path = require ('path');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
+const ImageMinimizerPlugin = require ('image-minimizer-webpack-plugin');
+const { extendDefaultPlugins } = require("svgo");
 
 module.exports = {
   mode: 'development',
@@ -49,6 +51,32 @@ module.exports = {
       title: 'Everypay',
       template: path.resolve (__dirname, './src/pug/index.pug'),
       filename: 'index.html',
+    }),
+    new ImageMinimizerPlugin ({
+      minimizerOptions: {
+        plugins: [
+          ['gifsicle', {interlaced: true}],
+          ['jpegtran', {progressive: true}],
+          ['optipng', {optimizationLevel: 5}],         
+          [
+            'svgo',
+            {
+              plugins: extendDefaultPlugins ([
+                {
+                  name: 'removeViewBox',
+                  active: false,
+                },
+                {
+                  name: 'addAttributesToSVGElement',
+                  params: {
+                    attributes: [{xmlns: 'http://www.w3.org/2000/svg'}],
+                  },
+                },
+              ]),
+            },
+          ],
+        ],
+      },
     }),
   ],
 };

@@ -32,6 +32,7 @@ body {
   max-width: 144rem;
   margin: 0 auto;
   font-family: AvenirNextCyr400;
+  background: #ffffff;
 }
 
 .header {
@@ -42,6 +43,9 @@ body {
   justify-content: space-between;
   max-width: 144rem;
   padding: 5rem 17rem;
+  @media (max-width: 1425px) {
+    padding-left: 12rem;
+  }
 }
 
 .nav {
@@ -53,25 +57,23 @@ body {
   margin-left: 4.3rem;
   &-item {
     margin: 0 2rem;
-    
+
     &_lang {
-        margin-left: 3.1rem;
-        margin-right: -1rem;      
+      margin-left: 3.1rem;
+      margin-right: -1rem;
     }
   }
   &-link {
     text-decoration: none;
     &:visited {
-        color: black;
+      color: black;
     }
     &-active {
-        color: #0aa8de;
-    } 
-    
+      color: #0aa8de;
+    }
   }
 }
 .connect-btn {
-  
   padding: 1.2rem 2.5rem;
   font-family: AvenirNextCyr600;
   border: 1px solid transparent;
@@ -85,13 +87,20 @@ body {
   &::after {
     content: "";
     position: absolute;
-    top: -2px;
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
     background: $mainblue;
     border-radius: 44px;
     z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 
@@ -109,5 +118,110 @@ body {
     background-color: #fff;
     border-radius: 20px;
     transition: all 0.2s linear;
+  }
+}
+.slider {
+  overflow: hidden;
+  &-line {
+    display: flex;
+    height: 61rem;
+    width: 144rem;
+    position: relative;
+    transition: all ease 1s;
+  }
+}
+
+.slide {
+  // border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 30rem 5rem 16rem;
+  margin-top: 5rem;
+  // width: 144rem;
+  &-info {
+    max-width: 41%;
+    min-width: 40rem;
+    margin-top: 2rem;
+  }
+  &-image {
+    max-width: 48%;
+    padding-left: 17rem;
+    margin-left: 3rem;
+  }
+  &-title {
+    font-family: AvenirNextCyr700;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 1rem;
+  }
+  &-desc {
+    font-family: AvenirNextCyr400;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.443077px;
+  }
+}
+.smallform {
+  position: relative;
+  margin-top: 4.8rem;
+  min-width: 43rem;
+  &-input {
+    width: 290px;
+    height: 43px;
+    border: none;
+    background: #f3f9ff;
+    border-radius: 44px;
+    padding-left: 20px;
+    padding-right: 50px;
+    font-family: AvenirNextCyr400;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    color: #2d3238;
+    &:focus {
+      outline: none;
+      border: 1px solid #0aa8de;
+      border-collapse: collapse;
+    }
+    &::placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1.4px;
+      color: #1792c7;
+      opacity: 0.6;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 58px;
+  background: $mainblue;
+  border-radius: 44px;
+  color: #ffffff;
+  padding: 1.25rem 5.3rem;
+  font-family: AvenirNextCyr500;
+  letter-spacing: 0.1rem;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.last-slide {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  &-title {
+    margin-top: 12rem;
   }
 }

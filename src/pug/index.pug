@@ -7,4 +7,36 @@ html(lang="en")
         title Everypay
     body
         include modules/header.pug 
+        .slider
+            .slider-line
+                section.slide
+                    .slide-info 
+                        h1.slide-title Не пропускайте важные оплаты
+                        p.slide-desc Если от них зависят ваши проекты или старт рекламных кампаний
+                        include modules/smallform.pug
+                    .slide-image 
+                        img(src="../assets/img/02money.png", alt="")
+
+                section.slide
+                    .slide-info 
+                        h1.slide-title Сократите издержки на бухгалтерию и коммуникации
+                        p.slide-desc Получайте информацию о платежах на счет компании там, где вам удобно
+                        include modules/smallform.pug
+                    .slide-image 
+                        img(src="../assets/img/03piggybank.png", alt="")
+
+                section.slide
+                    .slide-info 
+                        h1.slide-title Создавайте собственные сценарии действий 
+                        p.slide-desc при поступлении денег на счет вашей компании
+                        include modules/smallform.pug
+                    .slide-image 
+                        img(src="../assets/img/04screenshot.png", alt="")
+                
+                section.slide.last-slide
+                    .slide-info 
+                        h1.slide-title.last-slide-title Реагируйте на платежи так быстро, как они поступают на ваш счет
+                        include modules/smallform.pug
+                    .slide-image 
+                        img(src="../assets/img/05handwithphone.png", alt="")
         
