@@ -11,4 +11,6 @@ function slidershift(){
     slider.style.left = -shift + 'px'
 };
 
-let slidertimer = setInterval(() => slidershift(), 3000)
+// setInterval(() => slidershift(), 3000)
+
+// document.querySelector('.go').onclick = slidershift
