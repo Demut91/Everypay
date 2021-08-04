@@ -13,7 +13,8 @@ html(lang="en")
                     .slide-info 
                         h1.slide-title Не пропускайте важные оплаты
                         p.slide-desc.maintext Если от них зависят ваши проекты или старт рекламных кампаний
-                        include modules/smallform.pug
+                        .nomobile
+                            include modules/smallform.pug
                     .slide-image 
                         img(src="../assets/img/02money.png", alt="slide-image")
 
@@ -81,7 +82,7 @@ html(lang="en")
                             .banks-item-wrapper
                                 img(src="../assets/img/10tochkabank.png", alt="bank-img")
                         .banks-item
-                            .banks-item-wrapper
+                            .banks-item-wrapper_small
                                 img(src="../assets/img/11tinkoffbank.png", alt="bank-img")
                         .banks-item
                             .banks-item-wrapper
@@ -92,17 +93,17 @@ html(lang="en")
                 .integrations
                     h4.maintext.banksintegrations-heading Интеграции
                     .integrations-items
-                        .icon-wrapper
+                        .integrations-wrapper
                             img(src="../assets/icons/14push.png", alt="integration-img")
                         p.maintext Push-web уведомления
                         
                     .integrations-items
-                        .icon-wrapper
+                        .integrations-wrapper
                             img(src="../assets/icons/15email.png", alt="integration-img")
                         p.maintext E-mail уведомления
                         
                     .integrations-items
-                        .icon-wrapper
+                        .integrations-wrapper
                             img(src="../assets/icons/16telegram.png", alt="integration-img")
                         p.maintext Telegram
                         
@@ -196,12 +197,13 @@ html(lang="en")
                             |и в банк-клиенте автоматически будет создано платежное поручение на основании данных из счета. С помощью технологий компьютерного зрения и машинного обучения мы достигаем высокой точности и скорости работы
                 a(href="#mainup").comingsoon-link И еще 17 нововведений 
 
-            .safety#safety 
+            h2.heading.tab-only Безопасность
+            .safety#safety                 
                 .safety-image 
-                    img(src="../assets/img/26lock.png", alt="safe") 
-                .safety-info
-                    h2.heading Безопасность
-                    p.tarifs-desc Использование Everypay полностью безопасно: подключение к банковскому счету осуществляется в режиме «только 
+                    img(src="../assets/img/26lock.png", alt="safe")                 
+                .safety-info     
+                    h2.heading.desktop-only Безопасность               
+                    p.safety-desc Использование Everypay полностью безопасно: подключение к банковскому счету осуществляется в режиме «только 
                         |для получения выписок», а хранение информации в системе защищено 
                         |и деперсонализировано.
 

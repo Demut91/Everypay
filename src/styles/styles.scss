@@ -18,9 +18,9 @@
   src: url("../assets/fonts/AvenirNextCyr-Bold.woff") format("woff");
 }
 
-$r_minmob: 320px;
-$r_tab: 768px;
-$r_desk: 1000px;
+$minmob: 320px;
+$tab: 768px;
+$desk: 1000px;
 
 $mainbluegradient: linear-gradient(180deg, #1792c7 0%, #00b8f0 100%);
 $mainblue: #0aa8de;
@@ -52,21 +52,37 @@ body {
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.4px;
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     text-align: center;
+  }
+  @media (max-width: $minmob) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 .header {
   color: $darkgrey;
-  font-size: 14px;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 144rem;
   padding: 5rem 17rem;
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     padding: 5rem 6.4rem 5rem 7.1rem;
+  }
+  @media (max-width: $minmob) {
+    padding: 2.7rem 2.1rem;
+  }
+}
+.logo {
+  @media (max-width: $minmob) {
+    height: 1.5rem;
+  }
+  & img {
+    height: 100%;
+    width: auto;
   }
 }
 
@@ -98,7 +114,7 @@ body {
       color: $mainblue;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     display: none;
   }
 }
@@ -108,20 +124,20 @@ body {
   border: 1px solid transparent;
   letter-spacing: 1px;
   color: $mainblue;
-  font-size: 16px;
+  font-size: 1.6rem;
   position: relative;
-  line-height: 22px;
+  line-height: 2.2rem;
   background: $white;
-  border-radius: 44px;
+  border-radius: 4.4rem;
   &::after {
     content: "";
     position: absolute;
-    top: -3px;
-    bottom: -3px;
-    left: -3px;
-    right: -3px;
+    top: -0.3rem;
+    bottom: -0.3rem;
+    left: -0.3rem;
+    right: -0.3rem;
     background: $mainbluegradient;
-    border-radius: 44px;
+    border-radius: 4.4rem;
     z-index: -1;
   }
   &:hover {
@@ -131,7 +147,7 @@ body {
   &:active {
     box-shadow: none;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     display: none;
   }
 }
@@ -141,7 +157,7 @@ body {
   background-color: $white;
   border: none;
   width: 43px;
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     display: flex;
   }
   &__item {
@@ -153,7 +169,7 @@ body {
     border-radius: 20px;
     transition: all 1s linear;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     display: block;
   }
 }
@@ -162,6 +178,11 @@ body {
   position: relative;
   margin-top: 4.8rem;
   min-width: 52rem;
+  @media (max-width: $minmob) {
+    margin-left: 0;
+    min-width: 10rem;
+    padding-bottom: 6rem;
+  }
   &-input {
     width: 290px;
     height: 43px;
@@ -174,7 +195,13 @@ body {
     font-size: 16px;
     letter-spacing: 0.1rem;
     color: $darkgrey;
-
+    @media (max-width: $tab) {
+      margin-left: 3rem;
+    }
+    @media (max-width: $minmob) {
+      margin-left: 0;
+      width: 200px;
+    }
     &:focus {
       outline: none;
       border: 1px solid $mainblue;
@@ -187,6 +214,9 @@ body {
       letter-spacing: 1.4px;
       color: $darkblue;
       opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
     }
   }
   &-btn {
@@ -201,7 +231,12 @@ body {
     font-size: 16px;
     line-height: 22px;
     border: none;
-    @media (max-width: 768px) {
+
+    @media (max-width: $minmob) {
+      left: 168px;
+      padding: 1.2rem 2.7rem;
+    }
+    @media (max-width: $tab) {
       right: 58px;
     }
     &:hover {
@@ -215,10 +250,6 @@ body {
       outline: none;
       border: 1px solid $darkblue;
     }
-  }
-  @media (max-width: 768px) {
-    min-width: 46rem;
-    margin-left: 3rem;
   }
 }
 
@@ -236,10 +267,14 @@ body {
   justify-content: space-around;
   padding: 4rem 24rem 0rem 17rem;
   margin-top: 3rem;
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     margin-top: 0;
     padding: 0 4rem;
     flex-wrap: wrap;
+  }
+  @media (max-width: $minmob) {
+    padding: 0 2rem;
+    justify-content: space-between;
   }
   &-info {
     min-width: 43rem;
@@ -248,10 +283,21 @@ body {
   &-image {
     max-width: 48%;
     margin-left: 15rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       margin-left: 0;
       margin-right: 7rem;
       margin-top: 10rem;
+    }
+    @media (max-width: $minmob) {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-bottom: -10rem;
+    }
+    & img {
+      width: auto;
+      @media (max-width: $minmob) {
+        height: 65%;
+      }
     }
   }
   &-title {
@@ -260,8 +306,13 @@ body {
     line-height: 46px;
     margin-bottom: 1rem;
     max-width: 44rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: center;
+    }
+    @media (max-width: $minmob) {
+      font-size: 32px;
+      line-height: 38px;
+      max-width: 26rem;
     }
     &_third {
       max-width: 46rem;
@@ -271,9 +322,16 @@ body {
       margin-bottom: 1rem;
       margin-top: 0;
     }
+    @media (max-width: $minmob) {
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
   &-desc {
     max-width: 47rem;
+    @media (max-width: $minmob) {
+      max-width: 28rem;
+    }
   }
   &-three {
     padding: 0rem 20rem 5rem 12rem;
@@ -289,10 +347,21 @@ body {
   }
 }
 .desktop-only {
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     display: none;
   }
 }
+.tab-only {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.nomobile {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
 .container {
   padding: 0 17rem;
   background-image: url(../assets/img/Lines.png);
@@ -300,6 +369,9 @@ body {
   background-position: 0rem 66rem;
   @media (max-width: 1000px) {
     padding: 0 6.4rem;
+  }
+  @media (max-width: $minmob) {
+    padding: 0 2.1rem;
   }
 }
 
@@ -309,12 +381,24 @@ body {
   margin-bottom: 5rem;
   &-image {
     margin-left: -3rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       margin-left: 5rem;
+    }
+    @media (max-width: $minmob) {
+      margin-left: -2rem;
+      height: 19rem;
+    }
+    & img {
+      height: 100%;
+      width: auto;
     }
   }
   &-info {
     margin-left: 8rem;
+    @media (max-width: $minmob) {
+      padding-top: 0;
+      margin: 0;
+    }
   }
   &-heading {
     margin-top: 6rem;
@@ -323,14 +407,17 @@ body {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.44px;
+    @media (max-width: $minmob) {
+      margin: 0;
+    }
   }
   &-description {
     color: $darkgrey;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: left;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     flex-direction: column-reverse;
     margin-top: 4rem;
   }
@@ -340,8 +427,12 @@ body {
   font-family: AvenirNextCyr700;
   font-size: 40px;
   line-height: 46px;
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     text-align: center;
+  }
+  @media (max-width: $minmob) {
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 .howitworks {
@@ -351,9 +442,12 @@ body {
     margin-top: 6rem;
     justify-content: space-around;
     text-align: center;
-    flex-wrap: wrap;
-    @media (max-width: 768px) {
-      flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    @media (max-width: $minmob) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $minmob) {
+      margin-top: 3rem;
     }
   }
   &-item {
@@ -363,17 +457,23 @@ body {
     max-width: 25rem;
     margin-top: 5rem;
     justify-content: flex-end;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-height: 20rem;
+    }
+    @media (max-width: $minmob) {
+      margin-top: 1rem;
     }
   }
   &-text {
     text-align: center;
     color: $darkgrey;
+    @media (max-width: $minmob) {
+      max-width: 23rem;
+    }
   }
   &-image {
     margin-bottom: 3rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-height: 11rem;
       margin-bottom: 1rem;
     }
@@ -382,7 +482,7 @@ body {
       width: auto;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     padding: 0;
   }
 }
@@ -400,14 +500,26 @@ body {
   @media (max-width: 1439px) {
     flex-wrap: wrap;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $desk) {
     flex-direction: column;
   }
+  @media (max-width: $minmob) {
+    padding: 4rem 2rem 4rem 2rem;
+    width: 100%;
+    background-size: 75%;
+    background-position: 240% 12%;
+    margin-left: -2rem;
+  }
+  // &-heading {
+  //   @media (max-width: $minmob) {
+  //     max-width: 1rem;
+  //   }
+  // }
   &-wrapper {
     max-width: 50%;
     display: flex;
     flex-wrap: wrap;
-    @media (max-width: 768px) {
+    @media (max-width: $desk) {
       padding: 0;
       max-width: 100%;
     }
@@ -415,7 +527,7 @@ body {
   &-text {
     text-align: left;
     color: $darkgrey;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: center;
     }
   }
@@ -428,11 +540,11 @@ body {
   &-heading {
     color: rgba(56, 152, 254, 0.5);
     margin-bottom: 3rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: left;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     flex-direction: column;
     align-items: center;
   }
@@ -444,6 +556,14 @@ body {
   min-width: 53.4rem;
   padding: 1rem 4rem;
   margin-right: 3rem;
+  @media (max-width: $tab) {
+    max-width: 53.4rem;
+  }
+  @media (max-width: $minmob) {
+    padding: 1rem 1.6rem;
+    margin-right: 0;
+    min-width: 30rem;
+  }
   &-items {
     border-bottom: 1px solid rgba(0, 184, 240, 0.2);
     display: flex;
@@ -458,15 +578,35 @@ body {
       letter-spacing: 0.44px;
       margin-top: 4.5rem;
     }
+    @media (max-width: $minmob) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   &-item-wrapper {
     height: 10rem;
     margin-right: 4rem;
     display: flex;
     align-items: center;
-  }
-  @media (max-width: 768px) {
-    max-width: 53.4rem;
+    &_small {
+      @media (max-width: $minmob) {
+        height: 5rem;
+        display: flex;
+        margin-top: 0.85rem;
+      }
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    @media (max-width: $minmob) {
+      height: 7rem;
+      margin-right: 3.5rem;
+    }
+    & img {
+      height: 100%;
+      width: auto;
+    }
   }
 }
 
@@ -476,25 +616,33 @@ body {
   min-width: 53.4rem;
   padding: 1rem 4rem;
   margin-right: 3rem;
+  @media (max-width: $minmob) {
+    padding: 1rem 1.7rem;
+    margin-right: 0;
+    min-width: 30rem;
+  }
   &-items {
     margin-bottom: 4rem;
     display: flex;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $tab) {
     margin-top: 4rem;
   }
-}
-
-.icon-wrapper {
-  max-width: 5rem;
-  margin-right: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  & img {
-    height: 100%;
-    width: auto;
+  &-wrapper {
+    max-width: 5rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    @media (max-width: $minmob) {
+      max-width: 4rem;
+      margin-right: 2rem;
+    }
+    & img {
+      height: 100%;
+      width: auto;
+    }
   }
 }
 
@@ -509,7 +657,7 @@ body {
     color: $darkgrey;
     margin-bottom: 0;
     text-align: left;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       min-width: 10rem;
     }
   }
@@ -518,7 +666,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       flex-wrap: nowrap;
     }
   }
@@ -529,7 +677,7 @@ body {
     max-width: 25rem;
     margin-top: 5rem;
     justify-content: flex-end;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       min-width: 22rem;
       flex-direction: column;
       justify-content: flex-start;
@@ -538,14 +686,15 @@ body {
   &-text {
     text-align: left;
     color: $darkgrey;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       font-size: 16px;
       max-width: 20rem;
+      line-height: 20px;
     }
   }
   &-image {
     margin-left: 4rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-height: 12rem;
     }
     & img {
@@ -608,7 +757,7 @@ body {
     &:hover {
       opacity: 0.7;
     }
-  }  
+  }
 }
 
 .tarifs {
@@ -622,14 +771,14 @@ body {
     line-height: 34px;
     letter-spacing: 0.7px;
     color: $darkgrey;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       font-size: 18px;
       line-height: 28px;
     }
   }
   &-info {
     max-width: 54rem;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-width: 39rem;
     }
   }
@@ -639,14 +788,14 @@ body {
       width: auto;
       height: 100%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-height: 26rem;
       margin-top: 8.5rem;
       margin-right: 2rem;
     }
   }
   &-form {
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       padding-left: 7rem;
     }
   }
@@ -659,13 +808,13 @@ body {
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-bottom: 1px solid rgba(56, 152, 254, 0.2);
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       flex-wrap: wrap;
     }
   }
   &-title {
     min-width: 46%;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       min-width: 59rem;
     }
   }
@@ -677,7 +826,7 @@ body {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 0.44px;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: center;
     }
   }
@@ -685,7 +834,7 @@ body {
     text-align: left;
     margin-left: 16rem;
     max-width: 40%;
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       max-width: 40rem;
       text-align: center;
     }
@@ -710,17 +859,17 @@ body {
       );
       transform: rotate(90deg);
     }
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       text-align: left;
     }
   }
   &-icons {
-    @media (max-width: 768px) {
+    @media (max-width: $tab) {
       margin-right: 5rem;
     }
     & img {
       margin-right: 2rem;
-      @media (max-width: 768px) {
+      @media (max-width: $tab) {
         margin-right: 2rem;
       }
     }
@@ -728,6 +877,7 @@ body {
   &-link {
     display: block;
     margin-top: 4rem;
+    margin-bottom: 11rem;
     font-size: 22px;
     line-height: 30px;
     font-family: AvenirNextCyr600;
@@ -741,12 +891,40 @@ body {
 }
 
 .safety {
-  padding-top: 16rem;
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
   &-info {
     max-width: 47%;
+    margin-top: -2rem;
+    margin-left: 7rem;
+    @media (max-width: $tab) {
+      margin-left: -16rem;
+      max-width: 59%;
+    }
+  }
+  @media (max-width: $tab) {
+    margin-top: 7rem;
+  }
+  &-desc {
+    font-family: AvenirNextCyr400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+    color: $darkgrey;
+    @media (max-width: $tab) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-image {
+    @media (max-width: $tab) {
+      max-height: 20rem;
+      & img {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -759,17 +937,29 @@ body {
   background-image: url(../assets/img/Lines.png);
   background-repeat: no-repeat;
   background-position: -11rem 21rem;
+  @media (max-width: $tab) {
+    padding: 7rem 16.4rem 3.7rem 16.4rem;
+    position: relative;
+  }
   &-info {
     max-width: 42%;
+    @media (max-width: $tab) {
+      text-align: center;
+      max-width: 100%;
+    }
   }
   &-email {
     font-family: AvenirNextCyr400;
     font-size: 24px;
     line-height: 34px;
-    letter-spacing: 0.713846px;
+    letter-spacing: 0.7px;
     color: rgba(56, 152, 254, 0.3);
     margin-bottom: -2rem;
     margin-top: 2rem;
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &-text {
     font-family: AvenirNextCyr400;
@@ -778,10 +968,18 @@ body {
     letter-spacing: 0.7px;
     color: $darkgrey;
   }
+  @media (max-width: $minmob) {
+    font-size: 18px;
+    line-height: 28px;
+  }
   &-form {
     display: flex;
     flex-direction: column;
     min-width: 44rem;
+    @media (max-width: $minmob) {
+      min-width: 36rem;
+      margin: 0;
+    }
     &_input {
       height: 4.3rem;
       margin-bottom: 2rem;
@@ -801,17 +999,30 @@ body {
         letter-spacing: 0.44px;
         color: $darkblue;
         opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
       }
       &:focus {
         outline: none;
         border: 1px solid rgba(56, 152, 254);
       }
     }
+    @media (max-width: $tab) {
+      margin-top: 3rem;
+      margin-bottom: 7rem;
+    }
   }
   &-copyright {
     margin-top: 16rem;
     font-size: 8px;
     line-height: 10px;
+    @media (max-width: $tab) {
+      margin: 0;
+      position: absolute;
+      bottom: 3.3rem;
+      left: 6.4rem;
+    }
   }
   &-politics {
     text-align: right;
@@ -822,6 +1033,12 @@ body {
       &:hover {
         opacity: 0.7;
       }
+    }
+    @media (max-width: $tab) {
+      margin: 0;
+      position: absolute;
+      bottom: 3rem;
+      right: 6.4rem;
     }
   }
   &-btn {
