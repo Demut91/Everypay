@@ -1,18 +1,8 @@
 import "../styles/styles.scss";
+import forms from '../scripts/forms';
+import slidershift from '../scripts/slider.js'
 
-const slider = document.querySelector('.slider-line');
-let shift = 0;
-
-function slidershift(){
-    shift += 1440;
-    if (shift > 4320) {
-        shift = 0;
-    }
-    slider.style.left = -shift + 'px'
-};
-
-
-// setInterval(() => slidershift(), 5000)
+//setInterval(() => slidershift(), 5000)
 
 // document.querySelector('.go').onclick = slidershift
 
@@ -28,3 +18,4 @@ for (let anchor of anchors) {
   })
 }
 
+forms();
