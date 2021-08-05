@@ -1,6 +1,6 @@
-<form action="#" class="footer-form" id="bigform" method="#">
-    <input type="text" class="footer-form_input" name="name" value="" placeholder="Ваше имя*" required>
+<form action="#" class="footer-form"  method="#">
+    <input type="text" id="bigform" class="footer-form_input" name="name" value="" placeholder="Ваше имя*" required pattern="[а-яА-ЯёЁa-zA-Z]+$">
     <input type="email" class="footer-form_input" name="email" placeholder="Email*" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="28">
-    <textarea class="footer-form_input input-area" name="about" required placeholder="Расскажите о своей компании*"></textarea>
-    <button class="bigform-btn" type="submit">Подключиться</button>
+    <textarea class="footer-form_input input-area" name="about" required pattern="[а-яА-ЯёЁa-zA-Z]+$" placeholder="Расскажите о своей компании*"></textarea>
+    <button class="footer-btn" type="submit">Подключиться</button>
 </form>
