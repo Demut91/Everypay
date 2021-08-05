@@ -181,7 +181,7 @@ body {
   @media (max-width: $minmob) {
     margin-left: 0;
     min-width: 10rem;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
   &-input {
     width: 290px;
@@ -341,24 +341,8 @@ body {
 .last-slide {
   margin-left: -22rem;
   padding-top: 0;
-
   &-title {
     margin-top: 12rem;
-  }
-}
-.desktop-only {
-  @media (max-width: $tab) {
-    display: none;
-  }
-}
-.tab-only {
-  @media (min-width: 769px) {
-    display: none;
-  }
-}
-.nomobile {
-  @media (max-width: 500px) {
-    display: none;
   }
 }
 
@@ -372,6 +356,7 @@ body {
   }
   @media (max-width: $minmob) {
     padding: 0 2.1rem;
+    background-position: 20rem 27rem;
   }
 }
 
@@ -510,11 +495,6 @@ body {
     background-position: 240% 12%;
     margin-left: -2rem;
   }
-  // &-heading {
-  //   @media (max-width: $minmob) {
-  //     max-width: 1rem;
-  //   }
-  // }
   &-wrapper {
     max-width: 50%;
     display: flex;
@@ -636,7 +616,8 @@ body {
     align-items: center;
     object-fit: cover;
     @media (max-width: $minmob) {
-      max-width: 4rem;
+      width: 5rem;
+      height: 5rem;
       margin-right: 2rem;
     }
     & img {
@@ -669,6 +650,10 @@ body {
     @media (max-width: $tab) {
       flex-wrap: nowrap;
     }
+    @media (max-width: $minmob) {
+      flex-wrap: wrap;
+      padding-left: 2rem;
+    }
   }
   &-item {
     min-width: 25rem;
@@ -682,6 +667,9 @@ body {
       flex-direction: column;
       justify-content: flex-start;
     }
+    @media (max-width: $minmob) {
+      align-items: center;
+    }
   }
   &-text {
     text-align: left;
@@ -691,16 +679,27 @@ body {
       max-width: 20rem;
       line-height: 20px;
     }
+    @media (max-width: $minmob) {
+      text-align: center;
+    }
   }
   &-image {
     margin-left: 4rem;
     @media (max-width: $tab) {
       max-height: 12rem;
     }
+    @media (max-width: $minmob) {
+      max-height: 17rem;
+      margin-left: 2rem;
+    }
     & img {
       height: 100%;
       width: auto;
     }
+  }
+  @media (max-width: $minmob) {
+    padding: 0;
+    margin-bottom: 10rem;
   }
 }
 
@@ -709,17 +708,24 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 8rem;
+  @media (max-width: $minmob) {
+    margin-top: 2rem;    
+  }
+
   &-item {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    max-width: 34.6rem;
+    width: 34.6rem;
     min-height: 30rem;
     padding: 3.3rem 2rem 1.9rem 2.4rem;
     outline: 1px solid rgba(56, 152, 254, 0.187528);
     border-bottom: 3px solid transparent;
     box-sizing: border-box;
+    @media (max-width: $tab) {     
+      width: 31rem;
+    }
     &:hover {
       cursor: pointer;
       outline: none;
@@ -765,6 +771,11 @@ body {
   margin-bottom: 14rem;
   display: flex;
   justify-content: space-between;
+  @media (max-width: $minmob) {
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
   &-desc {
     font-family: AvenirNextCyr400;
     font-size: 24px;
@@ -781,22 +792,32 @@ body {
     @media (max-width: $tab) {
       max-width: 39rem;
     }
+    @media (max-width: $minmob) {
+      margin-top: 4rem;
+    }
   }
   &-image {
     max-height: 37rem;
-    & img {
-      width: auto;
-      height: 100%;
-    }
     @media (max-width: $tab) {
       max-height: 26rem;
       margin-top: 8.5rem;
       margin-right: 2rem;
     }
+    @media (max-width: $minmob) {
+      height: 19rem;
+      margin-left: 3rem;
+    }
+    & img {
+      width: auto;
+      height: 100%;
+    }
   }
   &-form {
     @media (max-width: $tab) {
       padding-left: 7rem;
+    }
+    @media (max-width: $minmob) {
+      padding-left: 0;
     }
   }
 }
@@ -805,17 +826,22 @@ body {
   &-item {
     display: flex;
     justify-content: space-between;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
     border-bottom: 1px solid rgba(56, 152, 254, 0.2);
     @media (max-width: $tab) {
       flex-wrap: wrap;
+    }
+    @media (max-width: $minmob) {
+      padding: 2rem 0;
     }
   }
   &-title {
     min-width: 46%;
     @media (max-width: $tab) {
       min-width: 59rem;
+    }
+    @media (max-width: $minmob) {
+      min-width: 28rem;
     }
   }
   &-heading {
@@ -829,6 +855,12 @@ body {
     @media (max-width: $tab) {
       text-align: center;
     }
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: left;
+      padding-left: 2.1rem;
+    }
   }
   &-info {
     text-align: left;
@@ -837,6 +869,9 @@ body {
     @media (max-width: $tab) {
       max-width: 40rem;
       text-align: center;
+    }
+    @media (max-width: $minmob) {
+      margin-left: 2.1rem;
     }
   }
   &-desc {
@@ -858,6 +893,11 @@ body {
         #b2eefc 73.96%
       );
       transform: rotate(90deg);
+      @media (max-width: $minmob) {
+        height: 2.1rem;
+        top: 0.2rem;
+        left: -2rem;
+      }
     }
     @media (max-width: $tab) {
       text-align: left;
@@ -887,6 +927,10 @@ body {
     &:hover {
       opacity: 0.7;
     }
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -902,9 +946,17 @@ body {
       margin-left: -16rem;
       max-width: 59%;
     }
+    @media (max-width: $minmob) {
+      margin-left: 1rem;
+      max-width: 100%;
+    }
   }
   @media (max-width: $tab) {
     margin-top: 7rem;
+  }
+  @media (max-width: $minmob) {
+    flex-direction: column;
+    margin-bottom: 3rem;
   }
   &-desc {
     font-family: AvenirNextCyr400;
@@ -920,10 +972,15 @@ body {
   &-image {
     @media (max-width: $tab) {
       max-height: 20rem;
-      & img {
-        width: auto;
-        height: 100%;
-      }
+    }
+    @media (max-width: $minmob) {
+      height: 18rem;
+      margin-left: 4rem;
+      margin-bottom: 3rem;
+    }
+    & img {
+      width: auto;
+      height: 100%;
     }
   }
 }
@@ -940,6 +997,10 @@ body {
   @media (max-width: $tab) {
     padding: 7rem 16.4rem 3.7rem 16.4rem;
     position: relative;
+  }
+  @media (max-width: $minmob) {
+    padding: 6rem 3.5rem 13rem 3.5rem;
+    background-image: none;
   }
   &-info {
     max-width: 42%;
@@ -967,17 +1028,17 @@ body {
     line-height: 34px;
     letter-spacing: 0.7px;
     color: $darkgrey;
-  }
-  @media (max-width: $minmob) {
-    font-size: 18px;
-    line-height: 28px;
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &-form {
     display: flex;
     flex-direction: column;
     min-width: 44rem;
     @media (max-width: $minmob) {
-      min-width: 36rem;
+      min-width: 25rem;
       margin: 0;
     }
     &_input {
@@ -993,6 +1054,10 @@ body {
       font-size: 16px;
       letter-spacing: 0.1rem;
       color: $darkgrey;
+      @media (max-width: $minmob) {
+        border-radius: 20px;
+        min-width: 25rem;
+      }
       &::placeholder {
         font-family: AvenirNextCyr400;
         font-size: 18px;
@@ -1012,6 +1077,10 @@ body {
       margin-top: 3rem;
       margin-bottom: 7rem;
     }
+    @media (max-width: $minmob) {
+      width: 25rem;
+      margin: 0;
+    }
   }
   &-copyright {
     margin-top: 16rem;
@@ -1023,6 +1092,10 @@ body {
       bottom: 3.3rem;
       left: 6.4rem;
     }
+    @media (max-width: $minmob) {
+      bottom: 1.3rem;
+      left: 12.4rem;
+    }
   }
   &-politics {
     text-align: right;
@@ -1030,6 +1103,11 @@ body {
     &-link {
       text-decoration: none;
       color: #00b8f0;
+      @media (max-width: $minmob) {
+        font-size: 12px;
+        line-height: 16px;
+        bottom: 6rem;
+      }
       &:hover {
         opacity: 0.7;
       }
@@ -1063,9 +1141,29 @@ body {
       border: 1px solid black;
     }
   }
+  @media (max-width: $minmob) {
+    width: 25rem;
+    margin: 0;
+  }
 }
 .input-area {
   padding: 1.2rem 2rem 0.5rem 2rem;
   resize: none;
   min-height: 7rem;
+}
+
+.desktop-only {
+  @media (max-width: $tab) {
+    display: none;
+  }
+}
+.tab-only {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.nomobile {
+  @media (max-width: 500px) {
+    display: none;
+  }
 }

@@ -28,4 +28,3 @@ for (let anchor of anchors) {
   })
 }
 
-// const slider = document.querySelector('.slider-line');
