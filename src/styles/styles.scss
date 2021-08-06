@@ -709,7 +709,7 @@ body {
   flex-wrap: wrap;
   margin-top: 8rem;
   @media (max-width: $minmob) {
-    margin-top: 2rem;    
+    margin-top: 2rem;
   }
 
   &-item {
@@ -723,7 +723,7 @@ body {
     outline: 1px solid rgba(56, 152, 254, 0.187528);
     border-bottom: 3px solid transparent;
     box-sizing: border-box;
-    @media (max-width: $tab) {     
+    @media (max-width: $tab) {
       width: 31rem;
     }
     &:hover {

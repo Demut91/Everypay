@@ -1,7 +1,7 @@
 const path = require ('path');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
 const ImageMinimizerPlugin = require ('image-minimizer-webpack-plugin');
-const { extendDefaultPlugins } = require("svgo");
+const {extendDefaultPlugins} = require ('svgo');
 
 module.exports = {
   mode: 'development',
@@ -57,7 +57,7 @@ module.exports = {
         plugins: [
           ['gifsicle', {interlaced: true}],
           ['jpegtran', {progressive: true}],
-          ['optipng', {optimizationLevel: 5}],         
+          ['optipng', {optimizationLevel: 5}],
           [
             'svgo',
             {
