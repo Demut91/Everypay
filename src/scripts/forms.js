@@ -1,7 +1,7 @@
 const forms = () => {
   const apiurl = 'http://ptsv2.com/t/0rft5-1628159972/post';
   const form = document.querySelectorAll ('form');
-  const inputs = document.querySelectorAll ('input', 'textarea');
+  const inputs = document.querySelectorAll ('input, textarea');
 
   const postData = async (url, data) => {
     let res = await fetch (url, {

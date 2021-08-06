@@ -2,9 +2,6 @@ import "../styles/styles.scss";
 import forms from '../scripts/forms';
 import slidershift from '../scripts/slider.js'
 
-//setInterval(() => slidershift(), 5000)
-
-// document.querySelector('.go').onclick = slidershift
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
@@ -18,4 +15,14 @@ for (let anchor of anchors) {
   })
 }
 
+
 forms();
+
+
+let buttonBurger = document.querySelector('.burger');
+let nav = document.querySelector('.nav');
+
+buttonBurger.onclick = function () {
+    nav.classList.toggle('desktop-only');    
+}
+
