@@ -6,7 +6,18 @@ function slidershift(){
     if (shift > 4320) {
         shift = 0;
     }
-    slider.style.left = -shift + 'px'
+    slider.style.right = shift + 'px'
 };
+
+function sliderback(){
+    shift = shift - 1440;
+    if (shift < 0) {
+        shift = 4320;
+    }
+    slider.style.right = shift + 'px'
+};
+
+ document.querySelector('.slider-next').onclick = slidershift
+ document.querySelector('.slider-prev').onclick = sliderback
 
 export default slidershift;

@@ -2,7 +2,7 @@ header.header#mainup
     a(href="#mainup").logo
         img(src="../assets/img/01logo.svg", alt="Logo") 
     nav 
-        ul.nav 
+        ul.nav.desktop-only
             li.nav-item 
                 a(href="#howitworks").nav-link Как&nbsp;это&nbsp;работает?  
             li.nav-item 
@@ -13,11 +13,15 @@ header.header#mainup
                 a(href="#tarifs").nav-link Тарифы
             li.nav-item 
                 a(href="#safety").nav-link Безопасность
-            li.nav-item_lang.item 
+            li.nav-item.tab-only 
+                a(href="#mainup").nav-link Контакты
+            li.nav-item.tab-only 
+                button.burger-btn Вход
+            li.nav-item_lang.desktop-only
                 a(href="#mainup").nav-link-active RU  
-            li.nav-item 
+            li.nav-item.desktop-only 
                 a(href="#mainup").nav-link EN
     button.connect-btn Подключиться
     button.burger
-        span.burger__item 
-        span.burger__item
+        span.burger-item 
+        span.burger-item
