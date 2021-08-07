@@ -8,12 +8,15 @@ function show () {
     place[i].appendChild (mess.cloneNode (true));
   }
 
-  setTimeout (hide, 5000);
+  setTimeout (hide, 3000);
+  
 
   function hide () {
     for (let i = 0; i < document.querySelectorAll ('.message-small').length; i++) {
-      document.querySelectorAll ('.message-small')[i].style.visibility = 'hidden';
-      //     document.getElementsByClassName('message-small')[i].remove();
+      document.querySelectorAll ('.message-small')[i].style.visibility = 'hidden';     
+    }
+    for (let i = 0; i < document.querySelectorAll ('.message-small').length; i++) {     
+      document.getElementsByClassName('message-small')[i].remove();
     }
   }
 }
