@@ -93,16 +93,15 @@ body {
   padding-left: 0;
   letter-spacing: 0.9px;
   margin-left: 4.3rem;
-  
+
   &-item {
     margin: 0 2rem;
     &_lang {
       margin-left: 3.1rem;
       margin-right: -1rem;
     }
-    @media (max-width: $tab) {      
+    @media (max-width: $tab) {
       margin-top: 3.2rem;
-      
     }
   }
   &-link {
@@ -128,9 +127,9 @@ body {
     display: flex;
     padding: 18rem 14rem;
     background: $white;
-    position: absolute;    
+    position: absolute;
     left: 6rem;
-    top: 10rem;    
+    top: 10rem;
     z-index: 5;
     flex-direction: column;
   }
@@ -138,9 +137,9 @@ body {
     display: flex;
     padding: 4rem 3rem;
     background: $white;
-    position: absolute;    
+    position: absolute;
     left: -4.5rem;
-    top: 4rem;    
+    top: 4rem;
     z-index: 5;
     flex-direction: column;
   }
@@ -251,7 +250,7 @@ body {
     &::placeholder {
       font-family: AvenirNextCyr400;
       font-size: 16px;
-      line-height: 24px;
+      //line-height: 24px;
       letter-spacing: 1.4px;
       color: $darkblue;
       opacity: 0.6;
@@ -282,7 +281,7 @@ body {
     }
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 6px 18px rgba(53, 152, 254);
+      box-shadow: 0px 2px 14px rgba(53, 152, 254);
     }
     &:active {
       box-shadow: none;
@@ -1044,7 +1043,7 @@ body {
     }
   }
   &-image {
-    max-height: 41rem;
+    max-height: 35rem;
     @media (max-width: $tab) {
       max-height: 20rem;
     }
@@ -1119,7 +1118,7 @@ body {
     &_input {
       height: 4.3rem;
       margin-bottom: 2rem;
-      padding: 0.8rem 2rem 0.5rem 2rem;
+      padding: 8px 20px 5px 20px;
       min-width: 44rem;
       background: $white;
       border: 1px solid rgba(56, 152, 254, 0.4);
@@ -1230,7 +1229,6 @@ body {
 .desktop-only {
   @media (max-width: $tab) {
     display: none;
-    
   }
 }
 .tab-only {
@@ -1242,4 +1240,25 @@ body {
   @media (max-width: 500px) {
     display: none;
   }
+}
+
+.message-small {
+  position: absolute;
+  top: -12px;
+  right: 43px;
+  background: #f3f9ff;
+  background-image: url(../assets/icons/Shape.png);
+  background-repeat: no-repeat;
+  background-position: 125px 18px;
+  border-radius: 44px;
+  color: #2d3238;
+  padding: 1.25rem 15.6rem;
+  font-family: AvenirNextCyr400;
+  letter-spacing: 0.1rem;
+  font-size: 16px;
+  line-height: 24px;
+  border: 12px solid $white;
+  box-sizing: border-box;
+  visibility: visible;  
+  z-index: 4;
 }
