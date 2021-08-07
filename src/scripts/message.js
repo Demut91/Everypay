@@ -13,9 +13,8 @@ function show () {
   for (let i = 0; i < place.length; i++) {
     place[i].appendChild (mess.cloneNode (true));
   }
-
-  setTimeout (hide, 4000);
   
+  setTimeout (hide, 4000);  
 
   function hide () {
     for (let i = 0; i < document.querySelectorAll ('.message-small').length; i++) {
