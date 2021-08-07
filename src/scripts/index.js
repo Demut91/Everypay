@@ -1,4 +1,5 @@
 import '../styles/styles.scss';
+import '../styles/header.scss';
 import forms from '../scripts/forms';
 import {slidershift, sliderback} from '../scripts/slider.js';
 
@@ -22,7 +23,7 @@ document.querySelector('.slider-prev').onclick = sliderback
 
 
 let buttonBurger = document.querySelector ('.burger');
-let nav = document.querySelector ('.nav');
+let nav = document.querySelector ('nav');
 buttonBurger.onclick = function () {
   nav.classList.toggle ('desktop-only');
 };

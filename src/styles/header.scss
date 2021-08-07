@@ -1,0 +1,85 @@
+@import "variables";
+
+.header {
+    color: $darkgrey;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 144rem;
+    padding: 5rem 17rem;
+    @media (max-width: $tab) {
+      padding: 5rem 6.4rem 5rem 7.1rem;
+    }
+    @media (max-width: $minmob) {
+      padding: 2.7rem 2.1rem;
+    }
+  }
+  .logo {
+    @media (max-width: $minmob) {
+      height: 1.5rem;
+    }
+    & img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    letter-spacing: 0.9px;
+    margin-left: 4.3rem;
+  
+    &-item {
+      margin: 0 2rem;
+      &_lang {
+        margin-left: 3.1rem;
+        margin-right: -1rem;
+      }
+      @media (max-width: $tab) {
+        margin-top: 3.2rem;
+      }
+    }
+    &-link {
+      text-decoration: none;
+      color: $darkgrey;
+      font-size: 14px;
+      &:visited {
+        color: black;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+      &-active {
+        text-decoration: none;
+        color: $mainblue;
+      }
+      @media (max-width: $tab) {
+        font-size: 24px;
+        margin-top: 3.2rem;
+      }
+    }
+    @media (max-width: $tab) {
+      display: flex;
+      padding: 18rem 14rem;
+      background: $white;
+      position: absolute;
+      left: 6rem;
+      top: 10rem;
+      z-index: 5;
+      flex-direction: column;
+    }
+    @media (max-width: $minmob) {
+      display: flex;
+      padding: 4rem 3rem;
+      background: $white;
+      position: absolute;
+      left: -4.5rem;
+      top: 4rem;
+      z-index: 5;
+      flex-direction: column;
+    }
+  }

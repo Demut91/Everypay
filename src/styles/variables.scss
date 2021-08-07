@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "AvenirNextCyr400";
+    src: url("../assets/fonts/AvenirNextCyr-Regular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "AvenirNextCyr500";
+    src: url("../assets/fonts/AvenirNextCyr-Medium.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "AvenirNextCyr600";
+    src: url("../assets/fonts/AvenirNextCyr-Demi.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "AvenirNextCyr700";
+    src: url("../assets/fonts/AvenirNextCyr-Bold.woff") format("woff");
+  }
+  
+  $minmob: 320px;
+  $tab: 768px;
+  $desk: 1000px;
+  
+  $mainbluegradient: linear-gradient(180deg, #1792c7 0%, #00b8f0 100%);
+  $mainblue: #0aa8de;
+  $darkblue: #1792c7;
+  $darkgrey: #2d3238;
+  $white: #ffffff;
+  $smokewhite: #f3f9ff;
