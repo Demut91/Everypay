@@ -73,6 +73,46 @@
         border-radius: 20px;
         min-width: 25rem;
       }
+      &::-webkit-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &::-moz-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &:-ms-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &::-ms-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
       &::placeholder {
         font-family: AvenirNextCyr400;
         font-size: 18px;
