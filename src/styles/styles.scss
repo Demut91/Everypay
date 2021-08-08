@@ -27,7 +27,7 @@ body {
   line-height: 28px;
   letter-spacing: 0.4px;
   @media (max-width: $tab) {
-    text-align: center;
+    text-align: left;
   }
   @media (max-width: $minmob) {
     font-size: 16px;
