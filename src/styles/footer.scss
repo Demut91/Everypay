@@ -48,7 +48,7 @@
       line-height: 28px;
     }
   }
-  &-form {
+  &__form {
     display: flex;
     flex-direction: column;
     min-width: 44rem;
@@ -56,7 +56,7 @@
       min-width: 25rem;
       margin: 0;
     }
-    &_input {
+    &-input {
       height: 4.3rem;
       margin-bottom: 2rem;
       padding: 8px 20px 5px 20px;

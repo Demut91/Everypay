@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -11,34 +11,34 @@ html(lang="en")
             .slider-line
                 .slide
                     .slide-info 
-                        h1.slide-title Не пропускайте важные оплаты
+                        h1.slide__title Не пропускайте важные оплаты
                         p.slide-desc.maintext Если от них зависят ваши проекты или старт рекламных кампаний
                         .nomobile
                             include modules/smallform.pug
-                    .slide-image 
+                    .slide__image 
                         img(src="../assets/img/02money.png", alt="slide-image")
 
                 .slide.desktop-only
                     .slide-info 
-                        h1.slide-title Сократите издержки на бухгалтерию и коммуникации
+                        h1.slide__title Сократите издержки на бухгалтерию и коммуникации
                         p.slide-desc.maintext Получайте информацию о платежах на счет компании там, где вам удобно
                         include modules/smallform.pug
-                    .slide-image 
+                    .slide__image 
                         img(src="../assets/img/03piggybank.png", alt="slide-image")
 
                 .slide.slide-three.desktop-only
                     .slide-info 
-                        h1.slide-title_third Создавайте собственные сценарии действий 
+                        h1.slide__title-third Создавайте собственные сценарии действий 
                         p.slide-desc.maintext при поступлении денег на счет вашей компании
                         include modules/smallform.pug
-                    .slide-image_third
+                    .slide__image-third
                         img(src="../assets/img/04screenshot.png", alt="slide-image")
                 
                 .slide.last-slide.desktop-only
                     .slide-info 
-                        h1.slide-title.last-slide-title Реагируйте на платежи так быстро, как они поступают на ваш счет
+                        h1.slide__title.last-slide-title Реагируйте на платежи так быстро, как они поступают на ваш счет
                         include modules/smallform.pug
-                    .last-slide-image 
+                    .last-slide__image 
                         img(src="../assets/img/05handwithphone.png", alt="slide-image")
         .slider-buttons.desktop-only
             button.slider-prev
@@ -81,10 +81,10 @@ html(lang="en")
                     h4.maintext.banksintegrations-heading Банки
                     .banks-items
                         .banks-item
-                            .banks-item-wrapper
+                            .banks-item__wrapper
                                 img(src="../assets/img/10tochkabank.png", alt="bank-img")
                         .banks-item
-                            .banks-item-wrapper_small
+                            .banks-item__wrapper-small
                                 img(src="../assets/img/11tinkoffbank.png", alt="bank-img")
                         .banks-item
                             .banks-item-wrapper
@@ -129,7 +129,7 @@ html(lang="en")
                         p.forwhom-text.maintext Быстрое внедрение своих приложений для малого бизнеса и стартапов
 
             h2.heading#cases Кейсы
-            .cases#cases
+            .cases
                 .cases-item 
                     .cases-icons 
                         .cases-icon 

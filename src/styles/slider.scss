@@ -56,7 +56,7 @@
       min-width: 43rem;
       margin-top: 2rem;
     }
-    &-image {
+    &__image {
       max-width: 48%;
       margin-left: 15rem;
       @media (max-width: $tab) {
@@ -76,7 +76,7 @@
         }
       }
     }
-    &-title {
+    &__title {
       font-family: AvenirNextCyr700;
       font-size: 40px;
       line-height: 46px;
@@ -90,7 +90,7 @@
         line-height: 38px;
         max-width: 26rem;
       }
-      &_third {
+      &-third {
         max-width: 46rem;
         font-family: AvenirNextCyr700;
         font-size: 40px;
