@@ -1,0 +1,124 @@
+@import "variables";
+
+.slider {
+    overflow: hidden;
+    &-line {
+      display: flex;
+      position: relative;
+      transition: all linear 1s;
+    }
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 6rem;
+    }
+    &-prev,
+    &-next {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      transform: rotate(45deg);
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+    &-prev {
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid $mainblue;
+      border-left: 1px solid $mainblue;
+    }
+    &-next {
+      border-bottom: none;
+      border-left: none;
+      border-top: 1px solid $mainblue;
+      border-right: 1px solid $mainblue;
+    }
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 24rem 0rem 17rem;
+    margin-top: 3rem;
+    @media (max-width: $tab) {
+      margin-top: 0;
+      padding: 0 4rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: $minmob) {
+      padding: 0 2rem;
+      justify-content: space-between;
+    }
+    &-info {
+      min-width: 43rem;
+      margin-top: 2rem;
+    }
+    &-image {
+      max-width: 48%;
+      margin-left: 15rem;
+      @media (max-width: $tab) {
+        margin-left: 0;
+        margin-right: 7rem;
+        margin-top: 10rem;
+      }
+      @media (max-width: $minmob) {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: -10rem;
+      }
+      & img {
+        width: auto;
+        @media (max-width: $minmob) {
+          height: 65%;
+        }
+      }
+    }
+    &-title {
+      font-family: AvenirNextCyr700;
+      font-size: 40px;
+      line-height: 46px;
+      margin-bottom: 1rem;
+      max-width: 44rem;
+      @media (max-width: $tab) {
+        text-align: center;
+      }
+      @media (max-width: $minmob) {
+        font-size: 32px;
+        line-height: 38px;
+        max-width: 26rem;
+      }
+      &_third {
+        max-width: 46rem;
+        font-family: AvenirNextCyr700;
+        font-size: 40px;
+        line-height: 46px;
+        margin-bottom: 1rem;
+        margin-top: 0;
+      }
+      @media (max-width: $minmob) {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+    &-desc {
+      max-width: 47rem;
+      @media (max-width: $minmob) {
+        max-width: 28rem;
+      }
+    }
+    &-three {
+      padding: 0rem 20rem 5rem 12rem;
+    }
+  }
+  
+  .last-slide {
+    margin-left: -22rem;
+    padding-top: 0;
+    margin-bottom: 5rem;
+    &-title {
+      margin-top: 12rem;
+    }
+  }

@@ -1,0 +1,188 @@
+@import "variables";
+
+.footer {
+  background-color: $smokewhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8rem 17rem 11rem 17.3rem;
+  background-image: url(../assets/img/Lines.png);
+  background-repeat: no-repeat;
+  background-position: -11rem 21rem;
+  @media (max-width: $tab) {
+    padding: 7rem 16.4rem 3.7rem 16.4rem;
+    position: relative;
+  }
+  @media (max-width: $minmob) {
+    padding: 6rem 3.5rem 13rem 3.5rem;
+    background-image: none;
+  }
+  &-info {
+    max-width: 42%;
+    @media (max-width: $tab) {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+  &-email {
+    font-family: AvenirNextCyr400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+    color: rgba(56, 152, 254, 0.3);
+    margin-bottom: -2rem;
+    margin-top: 2rem;
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-text {
+    font-family: AvenirNextCyr400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+    color: $darkgrey;
+    @media (max-width: $minmob) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 44rem;
+    @media (max-width: $minmob) {
+      min-width: 25rem;
+      margin: 0;
+    }
+    &_input {
+      height: 4.3rem;
+      margin-bottom: 2rem;
+      padding: 8px 20px 5px 20px;
+      min-width: 44rem;
+      background: $white;
+      border: 1px solid rgba(56, 152, 254, 0.4);
+      box-sizing: border-box;
+      border-radius: 40px;
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: $darkgrey;
+      @media (max-width: $minmob) {
+        border-radius: 20px;
+        min-width: 25rem;
+      }
+      &::placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid rgba(56, 152, 254);
+      }
+    }
+    @media (max-width: $tab) {
+      margin-top: 3rem;
+      margin-bottom: 7rem;
+    }
+    @media (max-width: $minmob) {
+      width: 25rem;
+      margin: 0;
+    }
+  }
+  &-copyright {
+    margin-top: 16rem;
+    font-size: 8px;
+    line-height: 10px;
+    @media (max-width: $tab) {
+      margin: 0;
+      position: absolute;
+      bottom: 3.3rem;
+      left: 6.4rem;
+    }
+    @media (max-width: $minmob) {
+      bottom: 1.3rem;
+      left: 12.4rem;
+    }
+  }
+  &-politics {
+    text-align: right;
+    margin-top: 12rem;
+    &-link {
+      text-decoration: none;
+      color: #00b8f0;
+      @media (max-width: $minmob) {
+        font-size: 12px;
+        line-height: 16px;
+        bottom: 6rem;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: $tab) {
+      margin: 0;
+      position: absolute;
+      bottom: 3rem;
+      right: 2.8rem;
+    }
+  }
+  &-btn {
+    max-width: 17.5rem;
+    background: $mainbluegradient;
+    border-radius: 44px;
+    color: $white;
+    padding: 1.25rem 2.8rem;
+    font-family: AvenirNextCyr600;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+    }
+    &:active {
+      box-shadow: none;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid black;
+    }
+  }
+  @media (max-width: $minmob) {
+    width: 25rem;
+    margin: 0;
+  }
+}
+
+.input-area {
+  padding: 1.2rem 2rem 0.5rem 2rem;
+  resize: none;
+  min-height: 7rem;
+}
+
+.message-big {
+  padding: 2rem;
+  width: 400px;
+  height: 144px;
+  background-color: $smokewhite;
+  position: absolute;
+  border-radius: 12px;
+  border: 6px solid $white;
+  font-family: AvenirNextCyr400;
+  font-size: 18px;
+  visibility: visible;
+  @media (max-width: $minmob) {
+    padding: 1rem;
+    width: 224px;
+    height: 165px;
+    font-size: 14px;
+  }
+}
