@@ -207,7 +207,7 @@ body {
     color: $white;
     padding: 1.3rem 4rem;
     font-family: AvenirNextCyr500;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1px;
     font-size: 16px;
     line-height: 22px;
     border: none;
@@ -233,7 +233,7 @@ body {
     padding-right: 50px;
     font-family: AvenirNextCyr400;
     font-size: 16px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1px;
     color: $darkgrey;
     @media (max-width: $tab) {
       margin-left: 3rem;
@@ -247,10 +247,49 @@ body {
       border: 1px solid $mainblue;
       border-collapse: collapse;
     }
+    &::-webkit-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;      
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &::-moz-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;      
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &:-ms-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;      
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &::-ms-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;      
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
     &::placeholder {
       font-family: AvenirNextCyr400;
-      font-size: 16px;
-      //line-height: 24px;
+      font-size: 16px;      
       letter-spacing: 1.4px;
       color: $darkblue;
       opacity: 0.6;
@@ -687,7 +726,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     @media (max-width: $minmob) {
       width: 5rem;
       height: 5rem;
@@ -1132,6 +1172,46 @@ body {
         border-radius: 20px;
         min-width: 25rem;
       }
+      &::-webkit-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &::-moz-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &:-ms-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
+      &::-ms-input-placeholder {
+        font-family: AvenirNextCyr400;
+        font-size: 18px;
+        letter-spacing: 0.44px;
+        color: $darkblue;
+        opacity: 0.6;
+        @media (max-width: $minmob) {
+          font-size: 16px;
+        }
+      }
       &::placeholder {
         font-family: AvenirNextCyr400;
         font-size: 18px;
@@ -1243,8 +1323,9 @@ body {
 }
 
 .message-small {
+  width: 497px;
   position: absolute;
-  top: -12px;
+  top: -10px;
   right: 43px;
   background: #f3f9ff;
   background-image: url(../assets/icons/Shape.png);
@@ -1252,13 +1333,43 @@ body {
   background-position: 125px 18px;
   border-radius: 44px;
   color: #2d3238;
-  padding: 1.25rem 15.6rem;
+  padding: 12.5px 157px;
   font-family: AvenirNextCyr400;
-  letter-spacing: 0.1rem;
   font-size: 16px;
   line-height: 24px;
-  border: 12px solid $white;
+  border: 6px solid $white;
   box-sizing: border-box;
-  visibility: visible;  
+  visibility: visible;
   z-index: 4;
+  @media (max-width: $minmob) {
+    width: 288px;
+    padding: 11.5px 35px;
+    top: -9px;
+    right: -10px;
+    background-position: 44px 17px;
+    border: 8px solid $white;
+  }
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+.message-big {
+  padding: 2rem;
+  width: 400px;
+  height: 144px;
+  background-color: $smokewhite;
+  position: absolute;
+  border-radius: 12px;
+  border: 6px solid $white;
+  font-family: AvenirNextCyr400;
+  font-size: 18px;
+  visibility: visible;
+  @media (max-width: $minmob) {
+    padding: 1rem;
+    width: 224px;
+    height: 165px;
+    font-size: 14px;
+  }
 }
