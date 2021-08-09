@@ -22,7 +22,7 @@ document.querySelector('.slider-prev').onclick = sliderback
 
 
 let buttonBurger = document.querySelector ('.burger');
-let nav = document.querySelector ('.nav');
+let nav = document.querySelector ('nav');
 buttonBurger.onclick = function () {
   nav.classList.toggle ('desktop-only');
 };
