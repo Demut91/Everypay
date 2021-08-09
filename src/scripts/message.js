@@ -7,7 +7,7 @@ function show () {
   const bigmess = document.createElement('div')
   bigmess.className = 'message-big'
   bigmess.innerHTML = 'Спасибо! <p>Мы приняли ваш запрос.</p><p>В ближайшее время наш специалист поддержки свяжется с вами.</p>'
-  let bigplace = document.querySelector('.footer__form')
+  let bigplace = document.querySelector('.footer-form')
   bigplace.appendChild(bigmess)
 
   for (let i = 0; i < place.length; i++) {

@@ -203,12 +203,12 @@
       line-height: 24px;
     }
   }
-  &-item__wrapper {
+  &-item-wrapper {
     height: 10rem;
     margin-right: 4rem;
     display: flex;
     align-items: center;
-    &-small {
+    &_small {
       @media (max-width: $minmob) {
         height: 5rem;
         display: flex;
