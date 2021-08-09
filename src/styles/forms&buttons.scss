@@ -1,182 +1,226 @@
 @import "variables";
 
 .connect-btn {
-    padding: 1.2rem 2.5rem;
-    font-family: AvenirNextCyr600;
-    border: 1px solid transparent;
-    letter-spacing: 1px;
-    color: $mainblue;
-    font-size: 1.6rem;
-    position: relative;
-    line-height: 2.2rem;
-    background: $white;
+  padding: 1.2rem 2.5rem;
+  font-family: AvenirNextCyr600;
+  border: 1px solid transparent;
+  letter-spacing: 1px;
+  color: $mainblue;
+  font-size: 1.6rem;
+  position: relative;
+  line-height: 2.2rem;
+  background: $white;
+  border-radius: 4.4rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    bottom: -0.3rem;
+    left: -0.3rem;
+    right: -0.3rem;
+    background: $mainbluegradient;
     border-radius: 4.4rem;
-    &::after {
-      content: "";
-      position: absolute;
-      top: -0.3rem;
-      bottom: -0.3rem;
-      left: -0.3rem;
-      right: -0.3rem;
-      background: $mainbluegradient;
-      border-radius: 4.4rem;
-      z-index: -1;
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+  }
+  &:active {
+    box-shadow: none;
+  }
+  @media (max-width: $tab) {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+  background-color: $white;
+  border: none;
+  width: 43px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: $tab) {
+    display: flex;
+  }
+  &-item {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: $mainblue;
+    border-radius: 20px;
+    transition: all 1s linear;
+  }
+  @media (max-width: $tab) {
+    display: block;
+  }
+  &-btn {
+    background: $mainbluegradient;
+    border-radius: 44px;
+    color: $white;
+    padding: 1.3rem 4rem;
+    font-family: AvenirNextCyr500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+  }
+}
+
+.smallform {
+  position: relative;
+  margin-top: 4.8rem;
+  min-width: 52rem;
+  @media (max-width: $minmob) {
+    margin-left: 0;
+    min-width: 10rem;
+    padding-bottom: 3rem;
+  }
+  &-input {
+    width: 290px;
+    height: 43px;
+    border: none;
+    background: $smokewhite;
+    border-radius: 44px;
+    padding-left: 20px;
+    padding-right: 50px;
+    font-family: AvenirNextCyr400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: $darkgrey;
+    @media (max-width: $tab) {
+      margin-left: 3rem;
+    }
+    @media (max-width: $minmob) {
+      margin-left: 0;
+      width: 200px;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $mainblue;
+      border-collapse: collapse;
+    }
+    &::-webkit-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &::-moz-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &:-ms-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &::-ms-input-placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+    &::placeholder {
+      font-family: AvenirNextCyr400;
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: $darkblue;
+      opacity: 0.6;
+      @media (max-width: $minmob) {
+        font-size: 16px;
+      }
+    }
+  }
+  &-btn {
+    position: absolute;
+    right: 58px;
+    background: $mainbluegradient;
+    border-radius: 44px;
+    color: $white;
+    padding: 1.25rem 5.3rem;
+    font-family: AvenirNextCyr500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+
+    @media (max-width: $minmob) {
+      left: 168px;
+      padding: 1.2rem 2.7rem;
+    }
+    @media (max-width: $tab) {
+      right: 58px;
     }
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+      box-shadow: 0px 2px 14px rgba(53, 152, 254);
+      @media (max-width: $tab) {
+        box-shadow: none;
+      }
     }
+
     &:active {
       box-shadow: none;
     }
-    @media (max-width: $tab) {
-      display: none;
+    &:focus {
+      outline: none;
+      border: 1px solid $darkblue;
     }
   }
-  
-  .burger {
-    display: none;
-    background-color: $white;
-    border: none;
-    width: 43px;
-    &:hover {
-      cursor: pointer;
-    }
-    @media (max-width: $tab) {
-      display: flex;
-    }
-    &-item {
-      display: block;
-      width: 100%;
-      height: 4px;
-      margin-bottom: 6px;
-      background-color: $mainblue;
-      border-radius: 20px;
-      transition: all 1s linear;
-    }
-    @media (max-width: $tab) {
-      display: block;
-    }
-    &-btn {
-      background: $mainbluegradient;
-      border-radius: 44px;
-      color: $white;
-      padding: 1.3rem 4rem;
-      font-family: AvenirNextCyr500;
-      letter-spacing: 1px;
-      font-size: 16px;
-      line-height: 22px;
-      border: none;
-    }
-  }
+}
 
-.smallform {
-    position: relative;
-    margin-top: 4.8rem;
-    min-width: 52rem;
-    @media (max-width: $minmob) {
-      margin-left: 0;
-      min-width: 10rem;
-      padding-bottom: 3rem;
-    }
-    &-input {
-      width: 290px;
-      height: 43px;
-      border: none;
-      background: $smokewhite;
-      border-radius: 44px;
-      padding-left: 20px;
-      padding-right: 50px;
-      font-family: AvenirNextCyr400;
-      font-size: 16px;
-      letter-spacing: 1px;
-      color: $darkgrey;
-      @media (max-width: $tab) {
-        margin-left: 3rem;
-      }
-      @media (max-width: $minmob) {
-        margin-left: 0;
-        width: 200px;
-      }
-      &:focus {
-        outline: none;
-        border: 1px solid $mainblue;
-        border-collapse: collapse;
-      }
-      &::placeholder {
-        font-family: AvenirNextCyr400;
-        font-size: 16px;
-        letter-spacing: 1.4px;
-        color: $darkblue;
-        opacity: 0.6;
-        @media (max-width: $minmob) {
-          font-size: 16px;
-        }
-      }
-    }
-    &-btn {
-      position: absolute;
-      right: 58px;
-      background: $mainbluegradient;
-      border-radius: 44px;
-      color: $white;
-      padding: 1.25rem 5.3rem;
-      font-family: AvenirNextCyr500;
-      letter-spacing: 1px;
-      font-size: 16px;
-      line-height: 22px;
-      border: none;
-  
-      @media (max-width: $minmob) {
-        left: 168px;
-        padding: 1.2rem 2.7rem;
-      }
-      @media (max-width: $tab) {
-        right: 58px;
-      }
-      &:hover {
-        cursor: pointer;
-        box-shadow: 0px 2px 14px rgba(53, 152, 254);
-      }
-      &:active {
-        box-shadow: none;
-      }
-      &:focus {
-        outline: none;
-        border: 1px solid $darkblue;
-      }
-    }
+.message-small {
+  width: 497px;
+  position: absolute;
+  top: -12px;
+  right: 43px;
+  background: #f3f9ff;
+  background-image: url(../assets/icons/Shape.png);
+  background-repeat: no-repeat;
+  background-position: 125px 18px;
+  border-radius: 44px;
+  color: #2d3238;
+  padding: 12.5px 157px;
+  font-family: AvenirNextCyr400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 6px solid $white;
+  box-sizing: border-box;
+  visibility: visible;
+  z-index: 4;
+  @media (max-width: $minmob) {
+    width: 288px;
+    padding: 11.5px 35px;
+    top: -9px;
+    right: -10px;
+    background-position: 44px 17px;
+    border: 8px solid $white;
   }
+}
 
-  .message-small {
-    width: 497px;
-    position: absolute;
-    top: -12px;
-    right: 43px;
-    background: #f3f9ff;
-    background-image: url(../assets/icons/Shape.png);
-    background-repeat: no-repeat;
-    background-position: 125px 18px;
-    border-radius: 44px;
-    color: #2d3238;
-    padding: 12.5px 157px;
-    font-family: AvenirNextCyr400;
-    font-size: 16px;
-    line-height: 24px;
-    border: 6px solid $white;
-    box-sizing: border-box;
-    visibility: visible;
-    z-index: 4;
-    @media (max-width: $minmob) {
-      width: 288px;
-      padding: 11.5px 35px;
-      top: -9px;
-      right: -9px;
-      background-position: 44px 17px;
-      border: 8px solid $white;
-    }
-  }
-  
-  input:invalid {
-    box-shadow: none;
-  }
+input:invalid {
+  box-shadow: none;
+}
