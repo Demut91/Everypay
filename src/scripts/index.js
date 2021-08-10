@@ -22,9 +22,13 @@ document.querySelector('.slider-prev').onclick = sliderback
 
 
 let buttonBurger = document.querySelector ('.burger');
-let nav = document.querySelector ('nav');
+let nav = document.querySelector ('.nav');
+let burgeritem1 = document.querySelector ('.burger__item-first');
+let burgeritem2 = document.querySelector ('.burger__item-second');
 buttonBurger.onclick = function () {
-  nav.classList.toggle ('desktop-only');
+  nav.classList.toggle ('animation');
+  burgeritem1.classList.toggle('burger-rotate1')
+  burgeritem2.classList.toggle('burger-rotate2')
 };
 
 
